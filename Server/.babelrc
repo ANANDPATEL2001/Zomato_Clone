@@ -1,0 +1,18 @@
+// 'Babel' is used to compile files and convert ES6 standered files into plain 'javascript' formate for browser compatibility
+// This file will host all of the options we want to add to Babel
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-object-rest-spread"
+    ]
+}
