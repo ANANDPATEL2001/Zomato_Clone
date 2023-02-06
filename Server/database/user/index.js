@@ -80,6 +80,7 @@ UserSchema.pre("save", function (next) {
     // Hashing is used to protect password and 'Salting' refers to the of times 'Hashing' is performed
     // Hashing should be below 10 otherwise it would take long time to generate and comapre the hash value & password
     bcrypt.genSalt(8, (error, salt) => {
+        // Random bytes get added to the password, and together the salted hash meets security recommendations on length and unpredictability.
         if (error) return next(error);
 
         // Hashing the password for 8 times
