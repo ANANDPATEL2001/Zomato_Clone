@@ -94,5 +94,5 @@ UserSchema.pre("save", function (next) {
 });
 
 
-// Collection alwayse works with plural hence folowing contains 'users' instead of 'user' 
+// Collection alwayse works with plural hence following contains 'users' instead of 'user' 
 export const UserModel = mongoose.model("users", UserSchema);

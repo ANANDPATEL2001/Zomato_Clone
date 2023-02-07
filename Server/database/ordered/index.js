@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const OrderSchema = new mongoose.Schema(
     {
-        // As ordered can hold multiple (values/items) hence declared as an array
+        // As Orders can hold multiple (values/items) hence declared as an array
         user: {
             type: mongoose.Types.ObjectId,
             ref: "users",
@@ -31,5 +31,5 @@ const OrderSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'orders' instead of 'order' 
+// Collection alwayse works with plural hence following contains 'orders' instead of 'order' 
 export const OrderModel = mongoose.model("orders", OrderSchema);

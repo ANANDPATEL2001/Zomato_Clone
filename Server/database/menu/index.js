@@ -30,5 +30,5 @@ const MenuSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'menus' instead of 'menu' 
+// Collection alwayse works with plural hence following contains 'menus' instead of 'menu' 
 export const MenuModel = mongoose.model("menus", MenuSchema);

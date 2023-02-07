@@ -14,5 +14,5 @@ const ImageSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'images' instead of 'image' 
+// Collection alwayse works with plural hence following contains 'images' instead of 'image' 
 export const ImageModel = mongoose.model("images", ImageSchema);

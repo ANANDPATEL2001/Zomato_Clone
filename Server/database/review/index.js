@@ -34,5 +34,5 @@ const ReviewSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'reviews' instead of 'review' 
+// Collection alwayse works with plural hence following contains 'reviews' instead of 'review' 
 export const ReviewModel = mongoose.model("reviews", ReviewSchema);

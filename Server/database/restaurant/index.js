@@ -42,5 +42,5 @@ const RestaurantSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'Restaurants' instead of 'Restaurant' 
+// Collection alwayse works with plural hence following contains 'Restaurants' instead of 'Restaurant' 
 export const RestaurantModel = mongoose.model("Restaurants", RestaurantSchema);

@@ -5,12 +5,17 @@ For this Applocation we have used following --
 
 ## BackEnd
 ### Normal Dependencies
-- nodemon - for automatic reloading of the website 
 - express - framework for Node.js
-- mongoose - Database
+- mongoose - Mongoose is a Node. js-based Object Data Modeling (ODM) library for MongoDB
 - .env - Dotenv is a zero-dependency module that loads environment
+- bcryptjs - bcrypt is a password-hashing function based on the Blowfish cipher incorporating a salt to protect against rainbow table attacks
+- express-session - HTTP server-side framework used to create and manage a session middleware.
+- jsonwebtoken - JWTs are used for authentication. This token tells the server what routes, services, and resources the user is allowed to access
+- passport -  Passport's sole purpose is to authenticate requests, which it does through an extensible set of plugins known as strategies
+- passport-jwt - This module lets you authenticate endpoints using a JSON web token
 
 ### Developer dependencies
+- nodemon - for automatic reloading of the website 
 - @babel/cli - Command Line Interface used to execute all the commands of Babel
 - @babel/core  
 - @babel/node - used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments

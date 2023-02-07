@@ -16,7 +16,7 @@ const options = {
     secretOrKey: "ZomatoApp",
 };
 
-// We will be using passport for Authentication Purpose
+// We will be using 'passport' for Authentication Purpose
 export default (passport) => {
     passport.use(
         // Once the Task has been completed, we get a 'Payload'

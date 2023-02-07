@@ -30,5 +30,5 @@ const FoodSchema = new mongoose.Schema(
     }
 );
 
-// Collection alwayse works with plural hence folowing contains 'foods' instead of 'food' 
+// Collection alwayse works with plural hence following contains 'foods' instead of 'food' 
 export const FoodModel = mongoose.model("foods", FoodSchema);
