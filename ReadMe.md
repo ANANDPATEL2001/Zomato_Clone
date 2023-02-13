@@ -13,6 +13,7 @@ For this Applocation we have used following --
 - jsonwebtoken - JWTs are used for authentication. This token tells the server what routes, services, and resources the user is allowed to access
 - passport -  Passport's sole purpose is to authenticate requests, which it does through an extensible set of plugins known as strategies
 - passport-jwt - This module lets you authenticate endpoints using a JSON web token
+- joi - The Schema description language and data validator for JavaScript
 
 ### Developer dependencies
 - nodemon - for automatic reloading of the website 

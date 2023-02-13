@@ -3,6 +3,7 @@ import session from 'express-session';
 import passport from 'passport';
 
 import { UserModel } from "../../database/allModels";
+import { validateId } from "../../validation/common.validation";
 
 const Router = express.Router();
 Router.use(express.json());
@@ -30,6 +31,7 @@ Router.get('/', passport.authenticate("jwt", { session: false }), async (req, re
 Router.get('/:_id', async (req, res) => {
     try {
         const { _id } = req.params;
+        await validateId(req.params);
         const getUser = await UserModel.findById(_id);
 
         if (!getUser) {
@@ -52,6 +54,7 @@ Router.get('/:_id', async (req, res) => {
 Router.put('/update/:_id', passport.authenticate("jwt", { session: false }), async (req, res) => {
     try {
         const { _id } = req.params;
+        await validateId(req.params);
         const { userData } = req.body;
 
         // Below is used to prevent anonymous entity to update user Data simply through their id

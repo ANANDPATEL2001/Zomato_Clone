@@ -1,6 +1,7 @@
 import express from "express";
 
 import { FoodModel } from "../../database/allModels";
+import { validateCategory, validateId } from "../../validation/common.validation";
 
 const Router = express.Router();
 Router.use(express.json());
@@ -13,6 +14,7 @@ Router.use(express.json());
 Router.get('/:_id', async (req, res) => {
     try {
         const { _id } = req.params;
+        await validateId(req.params);
         const foods = await FoodModel.findById(_id);
         return res.status(200).json({ foods });
 
@@ -30,6 +32,7 @@ Router.get('/:_id', async (req, res) => {
 Router.get('/r/:_id', async (req, res) => {
     try {
         const { _id } = req.params;
+        await validateId(req.params);
         const foods = await FoodModel.findById({
             restaurant: _id
         });
@@ -49,6 +52,7 @@ Router.get('/r/:_id', async (req, res) => {
 Router.get('/c/category', async (req, res) => {
     try {
         const { category } = req.params;
+        await validateCategory(req.params);
         const foods = await FoodModel.find({
             // Here $regex and $option is the feature provided by the 'MongoDB' 
             // $regex is used for the implementing Regular-Expression and "i" indicates Case Insensitivity 

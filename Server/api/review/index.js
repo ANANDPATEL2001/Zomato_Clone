@@ -3,6 +3,7 @@ import session from 'express-session';
 import passport from 'passport';
 
 import { ReviewModel } from "../../database/allModels";
+import { validateId } from "../../validation/common.validation";
 
 const Router = express.Router();
 Router.use(express.json());
@@ -15,6 +16,7 @@ Router.use(express.json());
 Router.get('/resId', async (req, res) => {
     try {
         const { resId } = req.params;
+        await validateId(req.params);
         const reviews = await ReviewModel.findOne({ restaurant: resId }).sort({
             // Below -1 indicates Descending order by Date-of-creation
             // Similarly 1 indicates Ascending order by Date-of-creation
@@ -64,6 +66,7 @@ Router.delete('/delete/:id', passport.authenticate("jwt", { session: false }), a
         const { _id } = req.params;
         const { user } = req;
 
+        await validateId(req.params);
         const reviewData = await ReviewModel.findOneAndDelete({
             // Here we have provided two ids, One w.r.t. id of the review and Second w.r.t. user id
             _id: _id,
