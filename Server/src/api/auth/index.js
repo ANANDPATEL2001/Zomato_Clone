@@ -1,4 +1,6 @@
 import express from "express";
+import passport from 'passport';
+import session from 'express-session';
 
 import { UserModel } from "../../database/allModels";
 import { validateSignup } from "../../validation/auth.validation";
@@ -19,7 +21,7 @@ Router.post('/signup', async (req, res) => {
         return res.status(200).json({ token, status: 'success' });
     }
     catch (error) {
-        return res.status(500).json({error: error.message });
+        return res.status(500).json({ error: error.message });
     }
 });
 
@@ -32,8 +34,20 @@ Router.post('/signin', async (req, res) => {
         return res.status(200).json({ token, status: 'success' });
     }
     catch (error) {
-        return res.status(500).json({error: error.message });
+        return res.status(500).json({ error: error.message });
     }
+});
+
+// Google Authentication
+Router.get('/google', passport.authenticate('google', {
+    scope: [
+        "https://www.googleapis.com/auth/userinfo/profile",
+        "https://www.googleapis.com/auth/userinfo/email",
+    ],
+}))
+
+Router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
+    return res.status(200).json({ token: req.session.passport.user.token });
 });
 
 

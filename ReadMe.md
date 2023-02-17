@@ -14,8 +14,11 @@ For this Applocation we have used following --
 - passport -  Passport's sole purpose is to authenticate requests, which it does through an extensible set of plugins known as strategies
 - passport-jwt - This module lets you authenticate endpoints using a JSON web token
 - joi - The Schema description language and data validator for JavaScript
+- aws-sdk - The AWS SDK for JavaScript simpliﬁes use of AWS Services by providing a set of libraries that are consistent and familiar for JavaScript developers
+- mutler - Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files
 
 ### Developer dependencies
+- passport-google-oauth2 - This module allows authentication using Google in our Node.js applications
 - nodemon - for automatic reloading of the website 
 - @babel/cli - Command Line Interface used to execute all the commands of Babel
 - @babel/core  
@@ -23,6 +26,7 @@ For this Applocation we have used following --
 - @babel/preset-env - used to manage which syntax transforms are needed by your target environment(s)
 
 ### API Planning
+- auth (for user authentication either through google-sign or other method)
 - Food (food items and details)
 - Resturants (Resturants & their details)
 - Menu (Menu and their Details)
