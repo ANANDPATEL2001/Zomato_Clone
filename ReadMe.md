@@ -1,7 +1,28 @@
 # This is a Zomato_Clone Website Application
 
 For this Applocation we have used following --
+
 ## FrontEnd
+### Normal Dependencies
+- React - React is a free and open-source front-end JavaScript library for building user interfaces based on components
+- React Script - react-scripts are simply scripts to run the build tools required to transform React JSX syntax into plain JavaScript programmatically
+- React DOM - The react-dom package provides DOM-specific methods that can be used at the top level of your app and as an escape hatch to get outside the React model if you need to
+- Web Vitals - Web Vitals helps you to quickly track and perceive how well your website is doing in terms of performance. Therefore it’s crucial to know how we can improve them
+- headlessui/react - Set of completely unstyled, fully accessible UI components for React, designed to integrate with Tailwind CSS
+- swiper - Swiper is the modern free mobile touch slider with hardware accelerated transitions and amazing native behavior
+- Axios - promise based HTTP client for Node.js & the Browser
+- react-rating-stars-component - A simple star rating component for your React projects
+- leaflet & react-leaflet - leaflet is an open-source JavaScript library for mobile-friendly interactive maps
+- react-router-dom - npm package for featuring Routing in clint & server side in React
+- react-icons - Include popular icons in your React projects easily with react-icons
+- react-simple-image-viewer - Simple image viewer component for React.
+- react-context-api - Where we can store or update date from anywhere i.e.data from any component & also we can access it from anywhere in the component
+
+### Developer Dependencies
+- TailwindCSS - Utility based CSS Framework including many UI components which does not support predefined classes for many of the UI components unlike other css framework like Bootstrap
+- PostCSS - PostCSS is a Node. js tool that transforms your styles using JavaScript plugins. It generates more downloads per week on NPM than other CSS preprocessors like Sass
+- AutoPrefixer - For automatically managing vendor prefixes in your CSS, we should use Autoprefixer
+
 
 ## BackEnd
 ### Normal Dependencies
@@ -25,7 +46,8 @@ For this Applocation we have used following --
 - @babel/node - used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments
 - @babel/preset-env - used to manage which syntax transforms are needed by your target environment(s)
 
-### API Planning
+
+### API Planning & DB Models
 - auth (for user authentication either through google-sign or other method)
 - Food (food items and details)
 - Resturants (Resturants & their details)
