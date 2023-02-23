@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-const CheckoutLayout = (component) => ({ ...props }) => {
+import Navbar from '../components/Navbar';
+
+
+const CheckoutLayout = (Component) => ({ ...props }) => {
   return (
-    <div>CheckoutLayout</div>
+    <>
+      <Navbar {...props} />
+      <div className='container mx-auto px-4 lg:px-20'>
+        <Component {...props} />
+      </div>
+    </>
   )
 }
 

@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
 
-const HomeLayout = (component) => ({ ...props }) => {
+import Navbar from '../components/Navbar';
+// import FoodTab from '../components/FoodTab';
+
+
+const HomeLayout = (Component) => ({ ...props }) => {
   return (
-    <div>HomeLayout</div>
+    <>
+      <Navbar {...props} />
+      {/* {FoodTab} */}
+      <div className='container mx-auto px-4 lg:px-20'>
+        <Component {...props} />
+      </div>
+    </>
   )
 }
 

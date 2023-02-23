@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+
+// Importing Layout
+import HomeLayout from '../layouts/Home.Layout';
 
 const Homepage = () => {
   return (
@@ -6,4 +9,4 @@ const Homepage = () => {
   )
 }
 
-export default Homepage
+export default HomeLayout(Homepage);

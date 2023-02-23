@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+
+// Importing Layout
+import CheckoutLayout from '../layouts/Checkout.Layout';
 
 const Checkout = () => {
   return (
@@ -6,4 +9,4 @@ const Checkout = () => {
   )
 }
 
-export default Checkout
+export default CheckoutLayout(Checkout);
