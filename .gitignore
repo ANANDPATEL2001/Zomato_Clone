@@ -1,6 +1,7 @@
 /Server/node_modules
 /Server/package-lock.json
 /Server/.env
+/Server/Dockerfile
 
 /client/node_modules
 /client/package-lock.json
